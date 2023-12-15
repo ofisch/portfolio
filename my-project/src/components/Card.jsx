@@ -8,14 +8,20 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 const Card = ({ project }) => {
   return (
     <div className={homeStyle.card}>
-      <img
+      <div
         className={homeStyle.cardImg}
-        src={project.imageUrl}
-        alt={project.title}
-      />
+        style={{ backgroundImage: `url(${project.imageUrl})` }}
+      ></div>
       <div className={homeStyle.cardContent}>
         <h2 className={homeStyle.cardTitle}>{project.title}</h2>
         <p className={homeStyle.cardDescription}>{project.description}</p>
+        <ul className="flex flex-wrap justify-center gap-2">
+          {project.lang.map((lang, index) => (
+            <li key={index} className={homeStyle.cardLang}>
+              {lang}
+            </li>
+          ))}
+        </ul>
         <div className={homeStyle.cardLink}>
           <button>
             <GitHubIcon />

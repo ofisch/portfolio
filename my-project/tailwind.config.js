@@ -13,10 +13,14 @@ export default {
       fontFamily: {
         Baloo2: ["Baloo2"],
       },
-      scale: {
-        // hehe
+      screens: {
+        xs: { max: "475px" },
+        sm: { max: "476px" },
+        md: { max: "768px" },
       },
     },
+    scale: {
+      // hehe
+    },
   },
-  plugins: [],
 };

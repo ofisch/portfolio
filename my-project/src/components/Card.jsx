@@ -7,10 +7,15 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Card = ({ project }) => {
   return (
-    <div className={homeStyle.card}>
+    <div className={`${homeStyle.card} ${homeStyle.cardHover}`}>
       <div
         className={homeStyle.cardImg}
-        style={{ backgroundImage: `url(${project.imageUrl})` }}
+        style={{
+          backgroundImage: `url(${project.imageUrl})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+        }}
       ></div>
       <div className={homeStyle.cardContent}>
         <h2 className={homeStyle.cardTitle}>{project.title}</h2>
@@ -23,12 +28,23 @@ const Card = ({ project }) => {
           ))}
         </ul>
         <div className={homeStyle.cardLink}>
-          <button>
-            <GitHubIcon />
-          </button>
-          <button className="text-blue-500">
-            <PlayArrowIcon />
-          </button>
+          {project.githubUrl !== "#" ? (
+            <button
+              className={homeStyle.buttonHover}
+              onClick={() => window.open(project.githubUrl, "_blank")}
+            >
+              <GitHubIcon />
+            </button>
+          ) : null}
+
+          {project.url !== "#" ? (
+            <button
+              onClick={() => window.open(project.url, "_blank")}
+              className={`${homeStyle.buttonHover} text-blue-500`}
+            >
+              <PlayArrowIcon />
+            </button>
+          ) : null}
         </div>
       </div>
     </div>

@@ -13,14 +13,14 @@ export const Main = () => {
               <div className="front">
                 <img
                   className={homeStyle.profileImg}
-                  src="\src\assets\img\onni.jpg"
+                  src="https://cdn.discordapp.com/attachments/1185220320492277900/1185981389032669194/onni.jpg?ex=6591963d&is=657f213d&hm=557be45ee27f1952c8a40715eb990e899f0e2dc79716028ac2222acd479c32ab&"
                   alt="onni"
                 />
               </div>
               <div className="back">
                 <img
                   className={homeStyle.profileImg}
-                  src="\src\assets\img\oni.jpg"
+                  src="https://cdn.discordapp.com/attachments/1185220320492277900/1185981380157526036/oni.jpg?ex=6591963b&is=657f213b&hm=5ca2f5ba8e21a8ca1c793f7461283bd75479e9ced5e5159bd4e99151ffd2dbb2&"
                   alt="onni"
                 />
               </div>

@@ -7,7 +7,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Card = ({ project }) => {
   return (
-    <div className={`${homeStyle.card} ${homeStyle.cardHover}`}>
+    <div className={`${homeStyle.card} ${homeStyle.cardHover} `}>
       <div
         className={homeStyle.cardImg}
         style={{

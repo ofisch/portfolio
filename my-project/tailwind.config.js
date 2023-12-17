@@ -19,8 +19,5 @@ export default {
         md: { max: "768px" },
       },
     },
-    scale: {
-      // hehe
-    },
   },
 };

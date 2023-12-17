@@ -9,7 +9,7 @@ const homeStyle = {
   introduction: "flex flex-col max-w-lg pt-8",
   mainContent: "flex items-center md:flex-col md:items-start md:px-8",
 
-  cardContainer: "grid grid-cols-3 md:flex md:flex-col gap-4 mt-8",
+  cardContainer: "grid grid-cols-4 md:flex md:flex-col gap-4 mt-8",
   card: "grid grid-rows-2 max-w-xs bg-white card rounded-lg shadow-lg",
   cardContent: "grid grid-rows-2 py-4 px-6",
   cardTitle: "card-title text-center my-4 tracking-wide font-bold",

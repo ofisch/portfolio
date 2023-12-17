@@ -41,4 +41,14 @@ export const projects = [
     lang: ["React", "JavaScript", "Material UI"],
   },
   */
+  {
+    id: 5,
+    title: "Riffsurf",
+    description: "Kitarapeli",
+    imageUrl:
+      "https://cdn.discordapp.com/attachments/1185220320492277900/1185976434854989904/riffsurf.JPG?ex=659191a0&is=657f1ca0&hm=f9ef7f65a1bf4a5fbd2f2f36497795a806b0665cb2e04ce6cbf2acb00f0cffa9&",
+    url: "https://ofisch.itch.io/riffsurf",
+    githubUrl: "https://github.com/tsarmander/guitarhero2022",
+    lang: ["Unity", "C#"],
+  },
 ];

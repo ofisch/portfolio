@@ -21,11 +21,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "KauppaKamu",
-    description: "Ostoslistasovellus",
+    title: "PuuhaPlanneri",
+    description: "Todo-listasovellus",
     imageUrl:
       "https://cdn.discordapp.com/attachments/1185220320492277900/1185600478684393523/kauppakamu.JPG?ex=6590337d&is=657dbe7d&hm=5f6c1533cc6a41ffef6769bbd10b6e0bacfcfca4e043683346cc04cd337483c0&",
-    url: "#",
+    url: "https://ostoslista-9f255.lm.r.appspot.com/landing",
     githubUrl: "https://github.com/ofisch/todoApp-firebase",
     lang: ["React", "JavaScript", "Tailwind", "Firebase"],
   },

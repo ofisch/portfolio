@@ -1,13 +1,1151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/img/of.JPG" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onni Fischer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedan:ital@0;1&display=swap");
+
+      :root {
+        --darkWhite: #f2e8cf;
+        --lightGreen: #a7c957;
+        --darkGreen: #386641;
+        --asparagus: #6a994e;
+        --red: #bc4749;
+        /*marginaalit ja täytteet*/
+        --left-margin: 8rem;
+        --right-margin: 8rem;
+        --top-padding: 4rem;
+        --bottom-padding: 4rem;
+        /*teksti*/
+        --big-title: 9rem;
+        --title: 2rem;
+        --big-text: 2.5rem;
+        --text: 1.5rem;
+        /*tekstimarginaalit*/
+        --big-title-margin: 1rem 0 1rem;
+      }
+
+      @media screen and (max-width: 1025px) {
+        :root {
+          --big-title: 6rem;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        :root {
+          --big-title: 3rem;
+          --text: 1.2rem;
+          --left-margin: 2rem;
+          --right-margin: 2rem;
+        }
+      }
+
+      @media screen and (min-width: 2100px) {
+        :root {
+          --left-margin: 35rem;
+          --right-margin: 35rem;
+        }
+      }
+
+      @media screen and (min-width: 2560px) {
+        :root {
+          --left-margin: 55rem;
+          --right-margin: 55rem;
+        }
+      }
+
+      @media screen and (min-width: 3840px) {
+        :root {
+          --left-margin: 60rem;
+          --right-margin: 60rem;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Platypi", sans-serif;
+      }
+
+      .container {
+      }
+
+      p {
+        font-size: var(--text);
+      }
+
+      .banner {
+        background-color: var(--lightGreen);
+        width: 100%;
+        height: 100%;
+      }
+
+      .banner h1 {
+        font-size: var(--big-title);
+      }
+
+      .banner h2 {
+        max-width: 75%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .banner h2 {
+          max-width: 100%;
+        }
+      }
+
+      .banner-content {
+        display: flex;
+        align-items: center;
+        padding-top: var(--top-padding);
+        padding-bottom: var(--bottom-padding);
+      }
+
+      .banner-left {
+        margin-left: var(--left-margin);
+        width: 60%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .banner-left {
+          width: 100%;
+          margin-right: var(--right-margin);
+        }
+      }
+
+      .banner-left h1 {
+        margin: 0;
+      }
+
+      .banner-left-image {
+        display: none;
+        border-radius: 50%;
+        border: 3px solid black;
+        width: 25rem;
+        height: 25rem;
+        object-fit: cover;
+      object-position: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        .banner-left-image {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+
+      .banner-left-circle {
+        display: none;
+        background-color: var(--darkGreen);
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: -8rem;
+        margin-left: 19rem;
+        border: 3px solid black;
+      }
+
+
+      .github-left-circle {
+        display: none;
+        background-color: var(--asparagus);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: -7rem;
+    margin-left: 0rem;
+        border: 3px solid black;
+      }
+
+      .github-left-circle:hover {
+        background-color: var(--darkGreen);
+        scale: 1.2;
+      }
+
+      .linkedin-left-circle {
+        display: none;
+        background-color: var(--lightGreen);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: -26rem;
+        margin-left: 2rem;
+        border: 3px solid black;
+      }
+
+      .linkedin-left-circle:hover {
+        background-color: var(--asparagus);
+        scale: 1.2;
+      }
+
+      @media screen and (max-width: 1025px) {
+        .banner-left-image {
+          display: block;
+        }
+
+        .banner-left-circle {
+          display: block;
+        }
+
+        .github-left-circle {
+          display: block;
+        }
+
+        .linkedin-left-circle {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .banner-left-circle {
+          width: 6rem;
+          height: 6rem;
+          margin-left: 14rem;
+          margin-top: -5rem;
+        }
+
+        .github-left-circle {
+          width: 5rem;
+          height: 5rem;
+          margin-top: -4rem;
+          margin-left: 0rem;
+          cursor: pointer;
+        }
+
+        .linkedin-left-circle {
+          width: 5rem;
+          height: 5rem;
+          margin-top: -20rem;
+          margin-left: -1rem;
+          cursor: pointer;
+        }
+      }
+
+
+      .banner-left h2 span {
+        color: var(--darkWhite);
+        background: -webkit-linear-gradient(var(--darkWhite), var(--darkWhite));
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .banner-left h2 span:hover {
+        background: -webkit-linear-gradient(
+          45deg,
+          var(--darkGreen),
+          var(--asparagus)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .banner-left h2 a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .banner-left button {
+        background-color: var(--darkGreen);
+        color: white;
+        border: 3px solid black;
+        box-shadow: black 3px 3px;
+        padding: 1rem 2rem;
+        font-size: var(--text);
+        cursor: pointer;
+        font-family: "Platypi", sans-serif;
+      }
+
+      .banner-left button:hover {
+        background-color: var(--lightGreen);
+        color: black;
+        box-shadow: black 6px 6px;
+      }
+
+      .banner-right {
+        margin-right: var(--right-margin);
+        width: 40%;
+      }
+
+      .banner-image {
+        border-radius: 50%;
+        border: 3px solid black;
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      @media screen and (max-width: 1025px) {
+        .banner-right {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .banner-image {
+          width: 25rem;
+          height: 25rem;
+        }
+      }
+
+      .github-circle {
+        background-color: var(--asparagus);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -1rem;
+    margin-left: -29rem;
+    border: 3px solid black;
+    cursor: pointer;
+      }
+
+      .github-circle:hover {
+        background-color: var(--darkGreen);
+        scale: 1.2;
+      }
+
+    @media screen and (max-width: 1200px) {
+      .github-circle {
+        width: 5rem;
+        height: 5rem;
+        margin-top: -1rem;
+        margin-left: -24rem;
+      }
+    }
+
+    .github-logo {
+      background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
+      width: 100%;
+      scale: 0.6;
+      height: 100%;
+      object-fit: cover;
+      margin: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-position: center;
+      background-size: contain;
+      align-content: flex-end;
+      justify-content: space-evenly;
+      align-items: stretch;
+    }
+    
+    .linkedin-circle {
+      background-color: var(--lightGreen);
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      position: absolute;
+      margin-top: 25rem;
+      margin-left: -28rem;
+      border: 3px solid black;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .linkedin-circle {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 20rem;
+        margin-left: -24rem;
+      }
+    }
+
+    .linkedin-circle:hover {
+      background-color: var(--asparagus);
+      scale: 1.2;
+    }
+
+    .linkedin-logo {
+      background-image: url(https://cdn-icons-png.flaticon.com/512/174/174857.png);
+      width: 100%;
+      height: 100%;
+      scale: 0.6;
+      object-fit: cover;
+      margin: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-position: center;
+      background-size: contain;
+    }
+
+      .circle {
+        background-color: var(--darkGreen);
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: 22rem;
+        margin-left: -9rem;
+        border: 3px solid black;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .circle {
+          width: 8rem;
+          height: 8rem;
+          margin-top: 18rem;
+          margin-left: -7rem;
+        }
+      }
+
+      .circle:hover {
+        background-color: var(--asparagus);
+        scale: 1.2;
+      }
+
+      .projects {
+        background-color: var(--darkGreen);
+      }
+
+      .wave {
+        min-height: 100px;
+        height: 10vh;
+        background-color: var(--lightGreen);
+
+        --mask: radial-gradient(
+              36.62px at 50% calc(100% - 51px),
+              #000 99%,
+              #0000 101%
+            )
+            calc(50% - 60px) 0 / 120px 100%,
+          radial-gradient(
+              36.62px at 50% calc(100% + 21px),
+              #0000 99%,
+              #000 101%
+            )
+            50% calc(100% - 30px) / 120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+
+      .projects-content {
+        padding: var(--top-padding) 0;
+        margin-left: var(--left-margin);
+        margin-right: var(--right-margin);
+      }
+
+      .projects-content h1 {
+        font-size: var(--big-title);
+        margin: var(--big-title-margin);
+        color: var(--darkWhite);
+      }
+
+      .project-card-container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media screen and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+        .project-card-container {
+          flex-direction: column;
+        }
+      }
+
+      .project-card {
+        display: flex;
+        background-color: var(--darkWhite);
+        border-radius: 15px;
+        border: 2px solid black;
+        box-shadow: var(--lightGreen) 5px 5px;
+        width: 100%;
+        resize: vertical;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .project-card h2 {
+        font-size: var(--title);
+        border-bottom: 2px solid black;
+        padding: 1rem;
+        margin: 0;
+      }
+
+      .project-card p {
+        padding: 1rem;
+        margin: 0;
+        font-size: var(--text);
+      }
+
+      .project-tech-tags {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .project-links a {
+        background-color: var(--lightGreen);
+        color: white;
+        border: 2px solid black;
+        box-shadow: var(--darkGreen) 3px 3px;
+        padding: 0.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20px;
+        min-height: 20px;
+        
+      }
+
+      .project-links a:hover {
+        background-color: var(--darkWhite);
+        color: black;
+        box-shadow: var(--darkGreen) 4px 4px;
+      }
+
+      .project-links a img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .project-tech-tags span {
+        background-color: var(--lightGreen);
+        border: 2px solid black;
+        box-shadow: var(--darkGreen) 3px 3px;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      .project-web-container {
+        width: 100%;
+        height: 300px;
+
+        border: 2px solid black;
+        margin-top: 1rem;
+      }
+
+      .project-web-container iframe {
+        width: 100%;
+        height: 100%;
+        resize: both;
+      }
+
+      .project-image-container {
+        width: 300px;
+        align-self: end;
+        height: 200px;
+        border: 2px solid black;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: var(--lightGreen) 5px 5px;
+      }
+
+      .project-image-container img {
+        width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+      }
+
+      .zig-zag {
+        background: linear-gradient(
+          135deg,
+          #1f005c,
+          #5b0060,
+          #870160,
+          #ac255e,
+          #ca485c,
+          #e16b5c,
+          #f39060,
+          #ffb56b
+        );
+        min-height: 250px;
+        height: 40vh;
+        height: round(40vh, 1px);
+        --mask: linear-gradient(#000 0 0) top / 100% calc(100% - 30px) no-repeat,
+          conic-gradient(
+              from -45deg at bottom,
+              #0000,
+              #000 1deg 89deg,
+              #0000 90deg
+            )
+            bottom / 60px 30px repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+
+      .wave-hobby {
+        min-height: 100px;
+        height: 5vh;
+        background-color: var(--darkGreen);
+
+        --mask: radial-gradient(
+              36.62px at 50% calc(100% - 51px),
+              #000 99%,
+              #0000 101%
+            )
+            calc(50% - 60px) 0 / 120px 100%,
+          radial-gradient(
+              36.62px at 50% calc(100% + 21px),
+              #0000 99%,
+              #000 101%
+            )
+            50% calc(100% - 30px) / 120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+
+      .hobbies {
+        background-color: var(--darkWhite);
+      }
+
+      .hobbies-content {
+        padding: var(--top-padding) 0;
+        margin-left: var(--left-margin);
+        margin-right: var(--right-margin);
+      }
+
+      .hobbies-content h1 {
+        font-size: var(--big-title);
+        margin: var(--big-title-margin);
+      }
+
+      .hobbies-content h2 {
+        font-size: var(--big-text);
+      }
+
+      .hobbies-content p {
+        font-size: var(--text);
+        margin: 0;
+        padding: 1rem;
+      }
+
+      .hobbies-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+
+      .hobby-card-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      @media screen and (max-width: 1025px) {
+        .hobby-card-container {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+      }
+
+      .hobby-card {
+        background-color: var(--lightGreen);
+        border-radius: 15px;
+        border: 2px solid black;
+        box-shadow: var(--darkGreen) 5px 5px;
+        width: 100%;
+      }
+
+      .hobby-card h2 {
+        font-size: var(--title);
+        border-bottom: 2px solid black;
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hobby-card span:hover {
+        scale: 1.6;
+      }
+
+      .star-outside {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        clip-path: polygon(
+          100% 50%,
+          78.98% 57.76%,
+          93.3% 75%,
+          71.21% 71.21%,
+          75% 93.3%,
+          57.76% 78.98%,
+          50% 100%,
+          42.24% 78.98%,
+          25% 93.3%,
+          28.79% 71.21%,
+          6.7% 75%,
+          21.02% 57.76%,
+          0% 50%,
+          21.02% 42.24%,
+          6.7% 25%,
+          28.79% 28.79%,
+          25% 6.7%,
+          42.24% 21.02%,
+          50% 0%,
+          57.76% 21.02%,
+          75% 6.7%,
+          71.21% 28.79%,
+          93.3% 25%,
+          78.98% 42.24%
+        );
+      }
+
+      .star-inside {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background-color: var(--red);
+        clip-path: polygon(
+          100% 50%,
+          78.98% 57.76%,
+          93.3% 75%,
+          71.21% 71.21%,
+          75% 93.3%,
+          57.76% 78.98%,
+          50% 100%,
+          42.24% 78.98%,
+          25% 93.3%,
+          28.79% 71.21%,
+          6.7% 75%,
+          21.02% 57.76%,
+          0% 50%,
+          21.02% 42.24%,
+          6.7% 25%,
+          28.79% 28.79%,
+          25% 6.7%,
+          42.24% 21.02%,
+          50% 0%,
+          57.76% 21.02%,
+          75% 6.7%,
+          71.21% 28.79%,
+          93.3% 25%,
+          78.98% 42.24%
+        );
+      }
+
+      .flower-outside {
+        position: relative;
+        height: 100px;
+        aspect-ratio: 1;
+        margin: auto;
+        --g: /30.26% 30.26% radial-gradient(#000 calc(71% - 1px), #0000 71%) no-repeat;
+        mask: radial-gradient(
+              100% 100%,
+              #000 calc(31.417% - 1px),
+              #0000 31.417%
+            )
+            intersect,
+          radial-gradient(#000 0 0) exclude, 100% 50% var(--g),
+          81.174% 89.092% var(--g), 38.874% 98.746% var(--g),
+          4.952% 71.694% var(--g), 4.952% 28.306% var(--g),
+          38.874% 1.254% var(--g), 81.174% 10.908% var(--g);
+        background-color: black;
+      }
+
+      .flower-inside {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background-color: var(--asparagus);
+        margin: auto;
+        --g: /30.26% 30.26% radial-gradient(#000 calc(71% - 1px), #0000 71%) no-repeat;
+        mask: radial-gradient(
+              100% 100%,
+              #000 calc(31.417% - 1px),
+              #0000 31.417%
+            )
+            intersect,
+          radial-gradient(#000 0 0) exclude, 100% 50% var(--g),
+          81.174% 89.092% var(--g), 38.874% 98.746% var(--g),
+          4.952% 71.694% var(--g), 4.952% 28.306% var(--g),
+          38.874% 1.254% var(--g), 81.174% 10.908% var(--g);
+      }
+
+      .octagon-outside {
+        position: relative;
+        width: 100px;
+        aspect-ratio: 1;
+        --o: calc(50% * tan(10.5deg));
+        clip-path: polygon(
+          var(--o) 50%,
+          50% var(--o),
+          calc(100% - var(--o)) 50%,
+          50% calc(100% - var(--o))
+        );
+        background: black;
+      }
+
+      .octagon-inside {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: var(--darkGreen);
+        clip-path: polygon(
+          var(--o) 50%,
+          50% var(--o),
+          calc(100% - var(--o)) 50%,
+          50% calc(100% - var(--o))
+        );
+      }
+
+      .music-wave-outside {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        height: round(40vh, 1px);
+        background-color: black;
+        --mask: radial-gradient(34.99px at 48px 50%, #000 99%, #0000 101%) 0
+            calc(50% - 60px) / 100% 120px,
+          radial-gradient(34.99px at -18px 50%, #0000 99%, #000 101%) 30px 50% /
+            100% 120px repeat-y;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+
+      .music-wave-inside {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background-color: var(--darkGreen);
+        --mask: radial-gradient(34.99px at 48px 50%, #000 99%, #0000 101%) 0
+            calc(50% - 60px) / 100% 120px,
+          radial-gradient(34.99px at -18px 50%, #0000 99%, #000 101%) 30px 50% /
+            100% 120px repeat-y;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+
+        .contact {
+            background-color: var(--darkGreen);
+        }
+
+        .contact-content {
+            padding: var(--top-padding) 0;
+            margin-left: var(--left-margin);
+            margin-right: var(--right-margin);
+        }
+
+        .contact-content h1 {
+            font-size: 6rem;
+            margin: var(--big-title-margin);
+            color: var(--darkWhite);
+            word-wrap: break-word;
+        }
+
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <div class="banner">
+        <div class="banner-content">
+          <div class="banner-left">
+            <h1>Hei!</h1>
+            <img class="banner-left-image" src="IMG_3068-rajattu.JPG" alt="Onni Fischer">
+            </img>
+            <div class="github-left-circle">
+              <div class="github-logo">
+                <a href="https://github.com/ofisch"></a>
+              </div>
+            </div>
+            <div class="linkedin-left-circle">
+              <div class="linkedin-logo"></div>
+            </div>
+            <div class="banner-left-circle"></div>
+            <h2>
+              Olen Onni Fischer, insinööriopiskelija Metropoliassa, pääaineena
+              web-tekniikat ja digitaalinen media. Olen kiinnostunut erityisesti
+              frontend-kehityksestä ja käyttöliittymien suunnittelusta.
+              Viimeisin innostava ja mielenkiintoinen projekti on ollut tekoälyä
+              hyödyntävän
+              <a href="https://www.webweave.fi"><span>kotisivukoneen</span></a>
+              kehittäminen yhdessä opiskelukavereiden kanssa! 🤖
+            </h2>
+            <button>Lisätietoa</button>
+          </div>
+          <div class="banner-right">
+            <img
+              class="banner-image"
+              src="IMG_3068-rajattu.JPG"
+              alt="brutal"
+            />
+            <span class="github-circle">
+              <div class="github-logo">
+                <a href="https://github.com/ofisch"></a>
+              </div>
+            </span>
+            <span class="linkedin-circle">
+              <div class="linkedin-logo">
+              </div>
+            </span>
+            <span class="circle"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <div class="wave"></div>
+        <div class="projects-content">
+          <h1>Projekteja</h1>
+          <div class="project-card-container">
+            <div class="project-card">
+              <h2>Webweave</h2>
+              <p>
+                Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone -
+                tällä hetkellä jatkokehityksessä
+              </p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-links">
+
+                <a href="https://www.webweave.fi"> <span>▶ Kokeile</span></a>
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/ww.JPG"
+                  alt="project"
+                />
+              </div>
+            </div>
+            <div class="project-card">
+              <h2>PuuhaPlanneri</h2>
+              <p>Tehtävälistasovellus</p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Tailwind</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ofisch/todoApp-firebase">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github logo"
+                  />
+                </a>
+                <a href="https://ostoslista-9f255.lm.r.appspot.com"><span>▶ Kokeile</span></a>
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/kauppakamu.JPG"
+                  alt="project"
+                />
+              </div>
+            </div>
+            <div class="project-card">
+              <h2>Idiomix</h2>
+              <p>Kielenopiskelusovellus</p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Material UI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ofisch/idiomix">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github logo"
+                  />
+                </a>
+                <a href="https://idiomix.lm.r.appspot.com"><span>▶ Kokeile</span></a>
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/idiomix.JPG"
+                  alt="project"
+                />
+              </div>
+            </div>
+          </div>
+          <h1>Nettisivuja</h1>
+          <div class="project-card-container">
+            <div class="project-card">
+              <h2>Company</h2>
+              <p>Perussivu esim. yritykselle</p>
+              <div class="project-tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://users.metropolia.fi/~onnif/demo-sivut/runko2.html"
+                >
+                  <span>▶ Kokeile</span></a
+                >
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/users.metropolia.fi_~onnif_demo-sivut_runko2.html.png"
+                  alt="project"
+                />
+              </div>
+            </div>
+        
+              <div class="project-card">
+                <h2>Brutal</h2>
+                <p>Neobrutalism-harjoittelua</p>
+                <div class="project-tech-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://users.metropolia.fi/~onnif/demo-sivut/brutal.html"
+                  >
+                    <span>▶ Kokeile</span></a
+                  >
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/brutal.png"
+                    alt="project"
+                  />
+                </div>
+              </div>
+    
+                <div class="project-card">
+                  <h2>Kokoruutu</h2>
+                  <p>Koko ruudun kokoiset osiot</p>
+                  <div class="project-tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://users.metropolia.fi/~onnif/demo-sivut/kokoRuutuPohja.html"
+                    >
+                      <span>▶ Kokeile</span></a
+                    >
+                  </div>
+                  <div class="project-image-container">
+                    <img
+                      src="https://users.metropolia.fi/~onnif/portfolioKuvat/kokoruutu.png"
+                      alt="project"
+                    />
+                  </div>
+                </div>
+          </div>
+        </div>
+        </div>
+        
+        <div class="hobbies">
+            <div class="wave-hobby"></div>
+            <div class="hobbies-content">
+              <h1>Harrastuksia</h1>
+              <div class="hobby-card-container">
+                <div class="hobby-card music-card">
+                  <h2>
+                    Musiikki
+                    <span
+                      ><div class="flower-outside">
+                        <div class="flower-inside"></div></div
+                    ></span>
+                  </h2>
+                  <p>
+                    Harrastan intohimoisesti musiikkia monessa muodossa, kuten
+                    kitaran soittamista, musiikin kirjoittamista ja
+                    äänittämistä, vinyylilevyjen keräämistä ja aktiivista
+                    keikoilla käyntiä!
+                  </p>
+                </div>
+                <div class="hobby-card">
+                  <h2>
+                    Liikunta
+                    <span>
+                      <div class="star-outside">
+                        <div class="star-inside"></div></div
+                    ></span>
+                  </h2>
+                  <p>
+                    Harrastan pyöräilyä ja juoksemista erityisesti kesäisin sekä
+                    hiihtoa talvisin.
+                  </p>
+                </div>
+                <div class="hobby-card">
+                  <h2>
+                    Lukeminen
+                    <span>
+                      <div class="octagon-outside">
+                        <div class="octagon-inside"></div>
+                      </div>
+                    </span>
+                  </h2>
+                  <p>
+                    Pidän erityisesti scifi- ja fantasiakirjallisuudesta, mutta
+                    olen myös kiinnostunut etenkin historia-aiheisesta
+                    tietokirjallisuudesta.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact-content">
+                <h1>onni.fischer@gmail.com</h1>
+            </div>
+          </div>
   </body>
+
+  <script>
+    const bannerButton = document.querySelector(".banner-left button");
+    const projects = document.querySelector(".projects");
+
+    const offset = -120;
+
+    bannerButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: projects.offsetTop - offset,
+            behavior: "smooth",
+          });
+        });
+
+        const githubButtonDesktop = document.querySelector(".github-circle");
+
+        githubButtonDesktop.addEventListener("click", () => {
+          window.open("https://github.com/ofisch", "_blank");
+        });
+
+        const githubButtonMobile = document.querySelector(".github-left-circle");
+
+        githubButtonMobile.addEventListener("click", () => {
+          window.open("https://github.com/ofisch", "_blank");
+        });
+
+        const linkedinButtonDesktop = document.querySelector(".linkedin-circle");
+
+        linkedinButtonDesktop.addEventListener("click", () => {
+          window.open("https://www.linkedin.com/in/onni-fischer-ab3923266/", "_blank");
+        });
+
+        const linkedinButtonMobile = document.querySelector(".linkedin-left-circle");
+
+        linkedinButtonMobile.addEventListener("click", () => {
+          window.open("https://www.linkedin.com/in/onni-fischer-ab3923266/", "_blank");
+        });
+
+    </script>
 </html>

@@ -86,27 +86,6 @@
       }
     }
 
-    @media screen and (min-width: 2100px) {
-      :root {
-        --left-margin: 35rem;
-        --right-margin: 35rem;
-      }
-    }
-
-    @media screen and (min-width: 2560px) {
-      :root {
-        --left-margin: 55rem;
-        --right-margin: 55rem;
-      }
-    }
-
-    @media screen and (min-width: 3840px) {
-      :root {
-        --left-margin: 60rem;
-        --right-margin: 60rem;
-      }
-    }
-
     html,
     body {
       height: 100%; /* Ensure the entire page takes the full height of the viewport */
@@ -134,6 +113,30 @@
       font-size: 2em;
     }
 
+    h1 {
+      font-size: 1em !important;
+    }
+
+    h2 {
+      font-size: 0.9em !important;
+    }
+
+    h3 {
+      font-size: 0.8em !important;
+    }
+
+    p {
+      font-size: 0.7em !important;
+    }
+
+    a {
+      font-size: 0.7em !important;
+    }
+
+    span {
+      font-size: 0.7em !important;
+    }
+
     .banner h2 {
       max-width: 75%;
     }
@@ -147,8 +150,8 @@
     .banner-content {
       display: flex;
       align-items: center;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .header {
@@ -166,7 +169,9 @@
     }
 
     .header-right {
+      display: flex;
       width: 70%;
+      align-items: center;
     }
 
     .header-text {
@@ -902,7 +907,7 @@
       display: flex;
       padding-left: var(--left-margin);
       padding-right: var(--right-margin);
-      padding-bottom: 3em;
+      padding-bottom: 1em;
     }
 
     .info {
@@ -966,7 +971,6 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      margin-top: 2rem;
       padding-left: 3em;
       padding-right: 3em;
     }
@@ -986,12 +990,16 @@
       font-size: var(--title);
       text-align: start;
       border-bottom: 2px solid black;
-      padding: 1rem;
+      padding-left: 1rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
       margin: 0;
     }
 
     .xp-box p {
-      padding: 1rem;
+      padding-left: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       margin: 0;
       font-size: var(--text);
     }
@@ -1009,22 +1017,24 @@
       font-size: var(--text);
       display: flex;
       gap: 1rem;
-      padding: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 0.5rem;
       flex-wrap: wrap;
+      justify-content: flex-end;
+      font-weight: bold;
     }
 
     .job-time span {
       background-color: var(--lightGreen);
       border: 2px solid black;
       box-shadow: var(--darkGreen) 3px 3px;
-      color: white;
-      padding: 0.5rem;
+      padding: 0.2rem;
       border-radius: 5px;
     }
 
     .education {
       border-top: 2px dashed black;
-      margin-top: 4em;
+      margin-top: 3em;
       margin-bottom: 4em;
     }
 
@@ -1032,7 +1042,6 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      margin-top: 2rem;
       padding-left: 3em;
       padding-right: 3em;
     }
@@ -1057,9 +1066,7 @@
                       erityisesti frontend-kehityksestä ja käyttöliittymien
                       suunnittelusta. Viimeisin innostava ja mielenkiintoinen
                       projekti on ollut tekoälyä hyödyntävän
-                      <a href="https://www.webweave.fi"
-                        ><span>kotisivukoneen</span></a
-                      >
+                      <a href="https://www.webweave.fi">kotisivukoneen</a>
                       kehittäminen yhdessä opiskelukavereiden kanssa! 🤖
                     </p>
                   </div>
@@ -1075,7 +1082,11 @@
             <ul>
               <li>
                 <h3>Osoite</h3>
-                <p>Luuvanpuisto 10</p>
+                <p>
+                  Luuvanpuisto 10
+                  <br />
+                  02620 Espoo
+                </p>
               </li>
               <li>
                 <h3>Puhelin</h3>
@@ -1095,7 +1106,7 @@
               </li>
               <li>
                 <h3>Kansallisuus</h3>
-                <p>suomi</p>
+                <p>Suomi</p>
               </li>
               <li>
                 <h3>Ajokortti</h3>

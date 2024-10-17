@@ -63,10 +63,10 @@
       --top-padding: 4rem;
       --bottom-padding: 4rem;
       /*teksti*/
-      --big-title: 2rem;
-      --title: 1.3rem;
-      --big-text: 1.2rem;
-      --text: 1rem;
+      --big-title: 1.3rem;
+      --title: 1.1rem;
+      --big-text: 0.9rem;
+      --text: 0.8rem;
       /*tekstimarginaalit*/
       --big-title-margin: 1rem 0 1rem;
     }
@@ -106,39 +106,20 @@
     .banner {
       background-color: var(--lightGreen);
       width: 100%;
-      height: 100%;
     }
 
     .banner h1 {
-      font-size: 2em;
-    }
-
-    h1 {
-      font-size: 1em !important;
-    }
-
-    h2 {
-      font-size: 0.9em !important;
-    }
-
-    h3 {
-      font-size: 0.8em !important;
-    }
-
-    p {
-      font-size: 0.7em !important;
-    }
-
-    a {
-      font-size: 0.7em !important;
-    }
-
-    span {
-      font-size: 0.7em !important;
+      font-size: 1.4em;
     }
 
     .banner h2 {
       max-width: 75%;
+    }
+
+    a {
+      font-size: var(--text);
+      color: var(--darkGreen);
+      text-decoration: none;
     }
 
     @media screen and (max-width: 768px) {
@@ -179,7 +160,7 @@
     }
 
     .header-text p {
-      font-size: 1.2em;
+      font-size: 1em;
     }
 
     @media screen and (max-width: 768px) {
@@ -216,14 +197,13 @@
     }
 
     .github-left-circle {
-      display: none;
       background-color: var(--asparagus);
-      width: 6rem;
-      height: 6rem;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
       position: absolute;
-      margin-top: -7rem;
-      margin-left: 0rem;
+      margin-top: 7rem;
+      margin-left: 7rem;
       border: 3px solid black;
     }
 
@@ -233,14 +213,13 @@
     }
 
     .linkedin-left-circle {
-      display: none;
-      background-color: var(--lightGreen);
-      width: 6rem;
-      height: 6rem;
+      background-color: var(--darkWhite);
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
       position: absolute;
-      margin-top: -26rem;
-      margin-left: 2rem;
+      margin-top: 0rem;
+      margin-left: -9rem;
       border: 3px solid black;
     }
 
@@ -340,23 +319,17 @@
     .banner-image {
       border-radius: 50%;
       border: 3px solid black;
-      min-width: 15rem;
-      height: 15rem;
+      min-width: 70%;
+      height: 10rem;
       object-fit: cover;
       object-position: center;
       align-self: center;
     }
 
-    @media screen and (max-width: 1025px) {
-      .banner-right {
-        display: none;
-      }
-    }
-
     @media screen and (max-width: 1200px) {
       .banner-image {
-        min-width: 100%;
-        height: 15rem;
+        min-width: 70%;
+        height: 10rem;
       }
     }
 
@@ -917,7 +890,18 @@
     }
 
     .info h2 {
+      font-size: 1em;
       text-align: center;
+    }
+
+    .info ul h3,
+    .info ul p {
+      margin-top: 0;
+      margin-bottom: 0.3em;
+    }
+
+    h3 {
+      font-size: 0.8em;
     }
 
     /* Language progress container */
@@ -947,8 +931,16 @@
       width: 100%;
     }
 
+    .fill-90 {
+      width: 90%;
+    }
+
     .fill-80 {
       width: 80%;
+    }
+
+    .fill-70 {
+      width: 70%;
     }
 
     .fill-60 {
@@ -964,6 +956,7 @@
     }
 
     .experience h2 {
+      font-size: 1em;
       text-align: center;
     }
 
@@ -1053,7 +1046,30 @@
           <div class="banner-content">
             <div class="header">
               <div class="header-left">
-                <img class="banner-image" src="IMG_3859.JPG" alt="brutal" />
+                <img
+                  class="banner-image"
+                  src="IMG_3859.JPG"
+                  alt="onni fischer"
+                />
+                <div class="github-left-circle">
+                  <a
+                    href="https://github.com/ofisch"
+                    target="_blank"
+                    style="display: block; width: 100%; height: 100%"
+                  >
+                    <div class="github-logo"></div>
+                  </a>
+                </div>
+
+                <div class="linkedin-left-circle">
+                  <a
+                    href="https://www.linkedin.com/in/onni-fischer-ab3923266/"
+                    target="_blank"
+                    style="display: block; width: 100%; height: 100%"
+                  >
+                    <div class="linkedin-logo"></div>
+                  </a>
+                </div>
               </div>
               <div class="header-right">
                 <div class="title">
@@ -1064,10 +1080,7 @@
                       Metropoliassa Tieto- ja viestintätekniikkaa pääaineena
                       Web-tekniikat ja digitaalinen media. Olen kiinnostunut
                       erityisesti frontend-kehityksestä ja käyttöliittymien
-                      suunnittelusta. Viimeisin innostava ja mielenkiintoinen
-                      projekti on ollut tekoälyä hyödyntävän
-                      <a href="https://www.webweave.fi">kotisivukoneen</a>
-                      kehittäminen yhdessä opiskelukavereiden kanssa! 🤖
+                      suunnittelusta.
                     </p>
                   </div>
                 </div>
@@ -1114,7 +1127,7 @@
               </li>
               <li>
                 <h3>Kotisivut</h3>
-                <a href="https://onni.pro">onni.pro</a>
+                <a href="https://onni.pro" target="_blank">onni.pro</a>
               </li>
             </ul>
             <h2>Kiinnostuksen kohteet</h2>
@@ -1126,7 +1139,8 @@
                 <p>Musiikki</p>
               </li>
             </ul>
-            <h2>Kielet</h2>
+            <!--
+              <h2>Kielet</h2>
             <ul>
               <li>
                 <p>suomi</p>
@@ -1147,10 +1161,69 @@
                 </div>
               </li>
             </ul>
+            -->
+            <h2>Taidot</h2>
+            <ul>
+              <li>
+                <p>React</p>
+                <div class="lang-progress">
+                  <div class="lang-progress-fill fill-90"></div>
+                </div>
+              </li>
+              <li>
+                <p>Java- ja TypeScript</p>
+                <div class="lang-progress">
+                  <div class="lang-progress-fill fill-90"></div>
+                </div>
+              </li>
+              <li>
+                <p>Firebase</p>
+                <div class="lang-progress">
+                  <div class="lang-progress-fill fill-60"></div>
+                </div>
+              </li>
+              <li>
+                <p>HTML</p>
+                <div class="lang-progress">
+                  <div class="lang-progress-fill fill-100"></div>
+                </div>
+              </li>
+              <li>
+                <p>CSS</p>
+                <div class="lang-progress">
+                  <div class="lang-progress-fill fill-90"></div>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="experience">
             <h2>Työkokemus</h2>
             <div class="xp-box-container">
+              <div class="xp-box">
+                <h2>postin lajittelija</h2>
+                <p class="employer">SOL</p>
+                <p class="job-desc">
+                  lähetysten lajittelu ja keräily, nippujen avaaminen
+                </p>
+                <div class="job-time">
+                  <span>syys 2024 - </span>
+                </div>
+              </div>
+
+              <div class="xp-box">
+                <h2>kehittäjä</h2>
+                <p class="employer">Webweave</p>
+                <p class="job-desc">
+                  tekoälyyn perustuvan kotisivukoneen suunnittelu, kehitys ja
+                  testaus
+                  <br />
+                  työkaluina React, TypeScript, Firebase ja OpenAI-rajapinta
+                </p>
+                <div class="job-time">
+                  <span>maalis 2024 - kesä 2024</span>
+                </div>
+              </div>
+
               <div class="xp-box">
                 <h2>kesätyöntekijä</h2>
                 <p class="employer">
@@ -1162,31 +1235,6 @@
                 </p>
                 <div class="job-time">
                   <span>heinä 2022 - heinä 2022</span>
-                </div>
-              </div>
-
-              <div class="xp-box">
-                <h2>harjoittelija</h2>
-                <p class="employer">Maanpuolustuskoulutusyhdistys, Helsinki</p>
-                <p class="job-desc">
-                  tiedon käsittely: luominen, kokoaminen, tulostuspalvelut,
-                  javaohjelmointikielellä toteutettu projekti, jossa pääpaino
-                  olio‑ohjelmoinnissa ja graafisessa käyttöliittymässä
-                </p>
-                <div class="job-time">
-                  <span>maalis 2020 - touko 2020</span>
-                </div>
-              </div>
-
-              <div class="xp-box">
-                <h2>kesätyöntekijä</h2>
-                <p class="employer">Sellon kirjasto, Espoo</p>
-                <p class="job-desc">
-                  kirjastoaineiston järjestely, hyllytys, varatun aineiston
-                  haku, asiakaspalvelu
-                </p>
-                <div class="job-time">
-                  <span>kesä 2019 - heinä 2019</span>
                 </div>
               </div>
             </div>

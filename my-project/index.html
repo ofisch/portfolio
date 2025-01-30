@@ -437,28 +437,29 @@
         color: var(--darkWhite);
       }
 
-      .project-card-container {
-        display: flex;
-        gap: 2rem;
-        margin-top: 2rem;
+
+
+.project-card {
+  display: flex;
+  background-color: var(--darkWhite);
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: var(--lightGreen) 5px 5px;
+  width: 100%; /* Default: Full width */
+  flex-direction: column;
+}
+
+.project-card-container {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+  gap: 1em;
       }
 
-      @media screen and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
         .project-card-container {
+          display: flex;
           flex-direction: column;
         }
-      }
-
-      .project-card {
-        display: flex;
-        background-color: var(--darkWhite);
-        border-radius: 15px;
-        border: 2px solid black;
-        box-shadow: var(--lightGreen) 5px 5px;
-        width: 100%;
-        resize: vertical;
-        flex-direction: column;
-        justify-content: space-between;
       }
 
       .project-card h2 {
@@ -469,6 +470,7 @@
       }
 
       .project-card p {
+        
         padding: 1rem;
         margin: 0;
         font-size: var(--text);
@@ -903,11 +905,35 @@
         <div class="projects-content">
           <h1>Projekteja</h1>
           <div class="project-card-container">
+
+            <div class="project-card">
+              <h2>SalesAI</h2>
+              <p>
+                Tekoälyavusteinen asiakaspalvelusovellus, jossa tekoäly oppii asiakkaiden kanssa käydyistä keskusteluista ja osaa tarjota keskusteluun sopivia vastauksia.
+                Tekoälyn saadessa tarpeeksi dataa sovellus voidaan automatisoida täysin.
+
+              </p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>CSS</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href=""></a>
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/ww.JPG"
+                    alt="project"
+                  />
+                </div>
+            </div>
+
             <div class="project-card">
               <h2>Webweave</h2>
               <p>
-                Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone -
-                tällä hetkellä jatkokehityksessä
+                Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone
               </p>
               <div class="project-tech-tags">
                 <span>React</span>

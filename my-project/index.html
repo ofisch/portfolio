@@ -450,9 +450,15 @@
 }
 
 .project-card-container {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   display: grid;
   gap: 1em;
+      }
+
+      @media screen and (max-width: 1400px) {
+        .project-card-container {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
 
       @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -905,6 +911,28 @@
           <div class="project-card-container">
 
             <div class="project-card">
+              <h2>Tehtis</h2>
+              <p>
+                Kurssiseuranta- ja arviointisovellus
+              </p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>CSS</span>
+                <span>better-sqlite3                </span>
+              </div>
+              <div class="project-links">
+              
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/tehtis.png"
+                    alt="project"
+                  />
+                </div>
+            </div>
+
+            <div class="project-card">
               <h2>SalesAI</h2>
               <p>
                 Kouluprojektina asiakkaalle kehitetty tekoälyavusteinen asiakaspalvelusovellus, jossa tekoäly oppii asiakkaiden kanssa käydyistä keskusteluista ja osaa tarjota keskusteluun sopivia vastauksia.
@@ -940,12 +968,10 @@
                 <span>Firebase</span>
               </div>
               <div class="project-links">
-
-             
               </div>
               <div class="project-image-container">
                 <img
-                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/ww.JPG"
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/webweave.jpg"
                   alt="project"
                 />
               </div>
@@ -995,6 +1021,54 @@
               <div class="project-image-container">
                 <img
                   src="https://users.metropolia.fi/~onnif/portfolioKuvat/idiomix.JPG"
+                  alt="project"
+                />
+              </div>
+            </div>
+            <div class="project-card">
+              <h2>Activout</h2>
+              <p>Ulkoilupaikkojen hakusovellus</p>
+              <div class="project-tech-tags">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Material UI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ofisch/activout">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github logo"
+                  />
+                </a>
+             
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/activout.JPG"
+                  alt="project"
+                />
+              </div>
+            </div>
+       
+            <div class="project-card">
+              <h2>Riffsurf</h2>
+              <p>Rytmipeli</p>
+              <div class="project-tech-tags">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/tsarmander/guitarhero2022">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github logo"
+                  />
+                </a>
+                <a href="https://ofisch.itch.io/riffsurf"><span>▶ Kokeile</span></a>
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="https://users.metropolia.fi/~onnif/portfolioKuvat/riffsurf.JPG"
                   alt="project"
                 />
               </div>

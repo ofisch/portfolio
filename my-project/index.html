@@ -449,10 +449,13 @@
   flex-direction: column;
 }
 
+
+
 .project-card-container {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  display: grid;
-  gap: 1em;
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1em; /* Space between cards */
+  align-items: start;
       }
 
       @media screen and (max-width: 1400px) {
@@ -858,6 +861,13 @@
             word-wrap: break-word;
         }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            align-items: start;
+        }
+
     </style>
   </head>
   <body>
@@ -908,7 +918,211 @@
         <div class="wave"></div>
         <div class="projects-content">
           <h1>Projekteja</h1>
-          <div class="project-card-container">
+
+          <div class="project-card-container" style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center;">
+            <div class="grid">
+            
+              <div 
+              
+                style="grid-column: span 1; grid-row: span 2;"
+              >
+              <div class="project-card">
+                <h2>Tehtis</h2>
+                <p>
+                  Kurssiseuranta- ja arviointisovellus
+                </p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>CSS</span>
+                  <span>better-sqlite3                </span>
+                </div>
+                <div class="project-links">
+                
+                  </div>
+                  <div class="project-image-container">
+                    <img
+                      src="https://users.metropolia.fi/~onnif/portfolioKuvat/tehtis.png"
+                      alt="project"
+                    />
+                  </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 2; grid-row: span 3; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>SalesAI</h2>
+                <p>
+                  Kouluprojektina asiakkaalle kehitetty tekoälyavusteinen asiakaspalvelusovellus, jossa tekoäly oppii asiakkaiden kanssa käydyistä keskusteluista ja osaa tarjota keskusteluun sopivia vastauksia.
+                  Tekoälyn saadessa tarpeeksi dataa sovellus voidaan automatisoida täysin.
+  
+                </p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>CSS</span>
+                  <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                
+                  </div>
+                  <div class="project-image-container">
+                    <img
+                      src="https://users.metropolia.fi/~onnif/portfolioKuvat/salesAI.JPG"
+                      alt="project"
+                    />
+                  </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 1; grid-row: span 2; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>Webweave</h2>
+                <p>
+                  Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone
+                </p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind</span>
+                  <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/webweave.jpg"
+                    alt="project"
+                  />
+                </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 1; grid-row: span 3; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>PuuhaPlanneri</h2>
+                <p>Tehtävälistasovellus</p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>Tailwind</span>
+                  <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ofisch/todoApp-firebase">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                      alt="github logo"
+                    />
+                  </a>
+                  <a href="https://ostoslista-9f255.lm.r.appspot.com"><span>▶ Kokeile</span></a>
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/kauppakamu.JPG"
+                    alt="project"
+                  />
+                </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 2; grid-row: span 3; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>Idiomix</h2>
+                <p>Kielenopiskelusovellus</p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>Material UI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ofisch/idiomix">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                      alt="github logo"
+                    />
+                  </a>
+                  <a href="https://idiomix.lm.r.appspot.com"><span>▶ Kokeile</span></a>
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/idiomix.JPG"
+                    alt="project"
+                  />
+                </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 1; grid-row: span 2; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>Activout</h2>
+                <p>Ulkoilupaikkojen hakusovellus</p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>Material UI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ofisch/activout">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                      alt="github logo"
+                    />
+                  </a>
+               
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/activout.JPG"
+                    alt="project"
+                  />
+                </div>
+              </div>
+              </div>
+            
+              <div 
+                style="grid-column: span 1; grid-row: span 2; align-items: center; justify-content: center;"
+              >
+              <div class="project-card">
+                <h2>Riffsurf</h2>
+                <p>Rytmipeli</p>
+                <div class="project-tech-tags">
+                  <span>Unity</span>
+                  <span>C#</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/tsarmander/guitarhero2022">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                      alt="github logo"
+                    />
+                  </a>
+                  <a href="https://ofisch.itch.io/riffsurf"><span>▶ Kokeile</span></a>
+                </div>
+                <div class="project-image-container">
+                  <img
+                    src="https://users.metropolia.fi/~onnif/portfolioKuvat/riffsurf.JPG"
+                    alt="project"
+                  />
+                </div>
+              </div>
+              </div>
+            
+            </div>
+          </div>
+          
+
+          <div >
 
             <div class="project-card">
               <h2>Tehtis</h2>
@@ -1245,5 +1459,16 @@
           window.open("https://www.linkedin.com/in/onni-fischer-ab3923266/", "_blank");
         });
 
+
+      window.addEventListener("load", function () {
+        const container = document.querySelector(".project-card-container");
+        const cards = Array.from(container.children);
+
+        cards.sort((a, b) => b.offsetHeight - a.offsetHeight); // Sort by height
+
+        container.innerHTML = ""; // Clear container
+        cards.forEach((card) => container.appendChild(card)); // Re-add in order
+      });
+  
     </script>
 </html>

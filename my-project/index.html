@@ -16,7 +16,7 @@
         /*marginaalit ja täytteet*/
         --left-margin: 8rem;
         --right-margin: 8rem;
-        --top-padding: 4rem;
+        --top-padding: 2rem;
         --bottom-padding: 4rem;
         /*teksti*/
         --big-title: 9rem;
@@ -36,7 +36,7 @@
       @media screen and (max-width: 768px) {
         :root {
           --big-title: 3rem;
-          --text: 1.2rem;
+          --text: 1.4rem;
           --left-margin: 2rem;
           --right-margin: 2rem;
         }
@@ -88,11 +88,13 @@
 
       .banner h2 {
         max-width: 75%;
+        font-size: 2em;
       }
 
       @media screen and (max-width: 768px) {
         .banner h2 {
           max-width: 100%;
+          font-size: 1.4em; 
         }
       }
 
@@ -450,9 +452,12 @@
 }
 
 .project-card-container {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  display: grid;
-  gap: 1em;
+  grid-auto-columns: auto;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
+  
       }
 
       @media screen and (max-width: 1400px) {
@@ -497,11 +502,11 @@
 
       .project-links a {
         background-color: var(--lightGreen);
-        color: white;
+        color: black;
         border: 2px solid black;
-        box-shadow: var(--darkGreen) 3px 3px;
-        padding: 0.5rem;
-        border-radius: 5px;
+        box-shadow: black 3px 3px;
+        padding: 1rem;
+        border-radius: 15px;
         text-decoration: none;
         min-width: 20px;
         min-height: 20px;
@@ -509,10 +514,10 @@
       }
 
       .project-links a:hover {
-        background-color: var(--darkWhite);
+        background-color: var(--lightGreen);
         color: black;
-        box-shadow: var(--darkGreen) 4px 4px;
-      }
+        box-shadow: black 5px 5px;     
+       }
 
       .project-links a img {
         width: 20px;
@@ -520,12 +525,16 @@
       }
 
       .project-tech-tags span {
-        background-color: var(--lightGreen);
-        border: 2px solid black;
-        box-shadow: var(--darkGreen) 3px 3px;
-        color: white;
-        padding: 0.5rem;
-        border-radius: 5px;
+        background-color: var(--asparagus);
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    color: var(--darkWhite);
+    font-size: 1.2em;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex
+;
+    align-items: center;
       }
 
       .project-web-container {
@@ -858,6 +867,26 @@
             word-wrap: break-word;
         }
 
+        #riffsurf-card {
+          grid-row: span 1;
+          grid-column: span 2;
+        }
+
+        @media screen and (max-width: 1400px) {
+          #riffsurf-card {
+            grid-row: span 1;
+            grid-column: span 1;
+          } 
+        }
+
+        .tech-icon {
+          width: 30px;
+        }
+
+        .react-blue {
+          color: #61dafb;
+        }
+
     </style>
   </head>
   <body>
@@ -910,15 +939,25 @@
           <h1>Projekteja</h1>
           <div class="project-card-container">
 
-            <div class="project-card">
-              <h2>Tehtis</h2>
+            <div class="project-card" style="    grid-row: span 1;
+    grid-column: span 2;">
+   
+    
+                <h2>  
+                 Tehtis</h2>
+
+  
               <p>
-                Kurssiseuranta- ja arviointisovellus
+                Helppokäyttöinen kurssiseuranta- ja arviointityökalu.
+                Opettaja voi luoda kursseja ja lisätä niihin materiaalia sekä tehtäviä.
+                Oppilaat voivat liittyä kursseille ja palauttaa tehtäviä sekä seurata omaa edistymistään.
               </p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>CSS</span>
+                <span>
+                  <img class="tech-icon" src="../icons/React-icon.svg" alt="react logo">
+                </span>
+                <span>              <img class="tech-icon" src="../icons/Typescript_logo_2020.svg.png" alt="typescript logo" ></span>
+                <span>  <img class="tech-icon" src="../icons/CSS3_logo.svg.png" alt="css logo"></span>
                 <span>better-sqlite3                </span>
               </div>
               <div class="project-links">
@@ -932,7 +971,8 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div style="grid-row: span 1; 
+          grid-column: span 2;" class="project-card">
               <h2>SalesAI</h2>
               <p>
                 Kouluprojektina asiakkaalle kehitetty tekoälyavusteinen asiakaspalvelusovellus, jossa tekoäly oppii asiakkaiden kanssa käydyistä keskusteluista ja osaa tarjota keskusteluun sopivia vastauksia.
@@ -940,10 +980,16 @@
 
               </p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>CSS</span>
-                <span>Firebase</span>
+                <span>
+                  <img class="tech-icon" src="../icons/React-icon.svg" alt="react logo" >
+                </span>
+                <span>
+                  <img class="tech-icon" src="../icons/Typescript_logo_2020.svg.png" alt="typescript logo" >
+                </span>
+                <span>  <img class="tech-icon" src="../icons/CSS3_logo.svg.png" alt="css logo" ></span>
+                <span>
+                  <img class="tech-icon" src="../icons/firebase.svg" alt="firebase logo" >
+                </span>
               </div>
               <div class="project-links">
               
@@ -956,16 +1002,19 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" style="grid-column: span 2;">
               <h2>Webweave</h2>
               <p>
-                Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone
+                Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone.
+                Käyttäjä voi antaa syötteen tekoälylle ja tekoäly luo sivun käyttäjän toiveiden mukaan.
               </p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Tailwind</span>
-                <span>Firebase</span>
+                <span>
+                  <img class="tech-icon" src="../icons/React-icon.svg" alt="react logo" >
+                </span>
+                <span>              <img class="tech-icon" src="../icons/Typescript_logo_2020.svg.png" alt="typescript logo" ></span>
+                <span><img class="tech-icon" src="../icons/Tailwind_CSS_Logo.svg" alt="tailwind logo" ></span>
+                <span>   <img class="tech-icon" src="../icons/firebase.svg" alt="firebase logo" ></span>
               </div>
               <div class="project-links">
               </div>
@@ -978,12 +1027,14 @@
             </div>
             <div class="project-card">
               <h2>PuuhaPlanneri</h2>
-              <p>Tehtävälistasovellus</p>
+              <p>Tehtävälistasovellus, jossa käyttäjä voi luoda listoja ja kutsua muita käyttäjiä niihin.</p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>JavaScript</span>
-                <span>Tailwind</span>
-                <span>Firebase</span>
+                <span>
+                  <img class="tech-icon" src="../icons/React-icon.svg" alt="react logo" >
+                </span>
+                <span>              <img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
+                <span><img class="tech-icon" src="../icons/Tailwind_CSS_Logo.svg" alt="tailwind logo" ></span>
+                <span>   <img class="tech-icon" src="../icons/firebase.svg" alt="firebase logo" ></span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/ofisch/todoApp-firebase">
@@ -1005,8 +1056,10 @@
               <h2>Idiomix</h2>
               <p>Kielenopiskelusovellus</p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>JavaScript</span>
+                <span>
+                  <img class="tech-icon" src="../icons/React-icon.svg" alt="react logo" >
+                </span>
+                <span>              <img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
                 <span>Material UI</span>
               </div>
               <div class="project-links">
@@ -1025,12 +1078,15 @@
                 />
               </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" style="grid-column: span 2;">
               <h2>Activout</h2>
-              <p>Ulkoilupaikkojen hakusovellus</p>
+              <p>Ulkoilupaikkojen hakusovellus. 
+                Käyttäjät voivat lisätä ja hakea ulkoilupaikkoja sekä arvioida niitä pisteyttämällä ja kommentoimalla.</p>
               <div class="project-tech-tags">
-                <span>React</span>
-                <span>JavaScript</span>
+                <span><img class="tech-icon" src="../icons/React-icon.svg"  alt="react logo"> 
+
+                </img></span>
+                <span>              <img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
                 <span>Material UI</span>
               </div>
               <div class="project-links">
@@ -1050,9 +1106,9 @@
               </div>
             </div>
        
-            <div class="project-card">
+            <div class="project-card" id="riffsurf-card">
               <h2>Riffsurf</h2>
-              <p>Rytmipeli</p>
+              <p>Guitar Hero -henkinen rytmipeli, jossa tarkoituksena on painaa oikeita nuotteja oikeaan aikaan. Yksin- ja kaksinpelattava.</p>
               <div class="project-tech-tags">
                 <span>Unity</span>
                 <span>C#</span>
@@ -1081,8 +1137,8 @@
               <p>Perussivu esim. yritykselle</p>
               <div class="project-tech-tags">
                 <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>   <img class="tech-icon" src="../icons/CSS3_logo.svg.png" alt="css logo" ></span>
+                <span><img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
               </div>
               <div class="project-links">
                 <a
@@ -1104,8 +1160,8 @@
                 <p>Neobrutalism-harjoittelua</p>
                 <div class="project-tech-tags">
                   <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
+                  <span>  <img src="../icons/CSS3_logo.svg.png" alt="css logo" style="width: 25px;"></span>
+                  <span><img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
                 </div>
                 <div class="project-links">
                   <a
@@ -1127,9 +1183,9 @@
                   <p>Koko ruudun kokoiset osiot</p>
                   <div class="project-tech-tags">
                     <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Tailwind</span>
+                    <span>  <img src="../icons/CSS3_logo.svg.png" alt="css logo" style="width: 25px;"></span>
+                    <span><img class="tech-icon" src="../icons/javascript-logo.svg" alt="javascript logo" ></span>
+                    <span><img src="../icons/Tailwind_CSS_Logo.svg" alt="tailwind logo" style="width: 25px;"></span>
                   </div>
                   <div class="project-links">
                     <a

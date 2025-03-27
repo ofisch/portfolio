@@ -82,6 +82,13 @@
         height: 100%;
       }
 
+      @media screen and (max-width: 1400px) {
+        :root {
+          --top-padding: 4rem;
+        }
+        
+      }
+
       .banner h1 {
         font-size: var(--big-title);
       }
@@ -89,6 +96,13 @@
       .banner h2 {
         max-width: 75%;
         font-size: 2em;
+      }
+
+      @media screen and (max-width: 1400px) {
+        .banner h2 {
+          max-width: 95%;
+          font-size: 1.6em;
+        }
       }
 
       @media screen and (max-width: 768px) {
@@ -481,7 +495,6 @@
       }
 
       .project-card p {
-        
         padding: 1rem;
         margin: 0;
         font-size: var(--text);
@@ -526,15 +539,14 @@
 
       .project-tech-tags span {
         background-color: var(--asparagus);
-    border: 2px solid black;
-    box-shadow: 3px 3px black;
-    color: var(--darkWhite);
-    font-size: 1.2em;
-    padding: 1rem;
-    border-radius: 5px;
-    display: flex
-;
-    align-items: center;
+        border: 2px solid black;
+        box-shadow: 3px 3px black;
+        color: var(--darkWhite);
+        font-size: 1.2em;
+        padding: 0.5rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
       }
 
       .project-web-container {
@@ -880,7 +892,7 @@
         }
 
         .tech-icon {
-          width: 30px;
+          width: 25px;
         }
 
         .react-blue {
@@ -990,6 +1002,9 @@
                 <span>
                   <img class="tech-icon" src="../icons/firebase.svg" alt="firebase logo" >
                 </span>
+                <span>
+                  <img class="tech-icon" src="../icons/ChatGPT_logo.svg.png" alt="openai logo" >
+                </span>
               </div>
               <div class="project-links">
               
@@ -1006,7 +1021,7 @@
               <h2>Webweave</h2>
               <p>
                 Kouluprojektina toteutettu tekoälyä hyödyntävä kotisivukone.
-                Käyttäjä voi antaa syötteen tekoälylle ja tekoäly luo sivun käyttäjän toiveiden mukaan.
+                Käyttäjä antaa syötteen tekoälylle ja tekoäly luo sivun käyttäjän toiveiden mukaan.
               </p>
               <div class="project-tech-tags">
                 <span>
@@ -1015,6 +1030,9 @@
                 <span>              <img class="tech-icon" src="../icons/Typescript_logo_2020.svg.png" alt="typescript logo" ></span>
                 <span><img class="tech-icon" src="../icons/Tailwind_CSS_Logo.svg" alt="tailwind logo" ></span>
                 <span>   <img class="tech-icon" src="../icons/firebase.svg" alt="firebase logo" ></span>
+                <span>
+                  <img class="tech-icon" src="../icons/ChatGPT_logo.svg.png" alt="openai logo" >
+                </span>
               </div>
               <div class="project-links">
               </div>
@@ -1114,12 +1132,6 @@
                 <span>C#</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/tsarmander/guitarhero2022">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt="github logo"
-                  />
-                </a>
                 <a href="https://ofisch.itch.io/riffsurf"><span>▶ Kokeile</span></a>
               </div>
               <div class="project-image-container">
